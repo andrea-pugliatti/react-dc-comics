@@ -23,7 +23,7 @@ body {
 
 /* Utilities */
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -72,4 +72,38 @@ header ul a {
   text-transform: uppercase;
   font-weight: 600;
   /* letter-spacing: normal; */
+}
+
+/* Content */
+.content {
+  background-color: var(--dc-bg-primary);
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 3rem;
+}
+
+/* Banner */
+.banner {
+  background-color: var(--dc-primary);
+  padding: 2.5rem;
+}
+
+.banner-element {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.banner-element span {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  min-width: 150px;
+  color: white;
+}
+
+.banner-element img {
+  display: inline-block;
+  max-height: 50px;
+  max-width: 50px;
 }
