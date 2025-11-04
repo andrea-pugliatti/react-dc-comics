@@ -3,7 +3,9 @@ export default function Header() {
   return (
     <header>
       <div className="container d-flex space-between">
-        <img src={logoPath} alt="" />
+        <a href="#">
+          <img src={logoPath} alt="" />
+        </a>
         <ul>
           <li>
             <a href="#">Characters</a>
