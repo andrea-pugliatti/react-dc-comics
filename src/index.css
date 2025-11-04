@@ -1,11 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
+/* Variables */
+:root {
+  --dc-primary: rgb(2 130 249);
+  --dc-bg-primary: rgb(28 28 28);
+  --dc-bg-secondary: rgb(48 48 48);
+  --header-height: 100px;
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Generics */
 body {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+}
+
+/* Utilities */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* Header */
+header {
+  padding: 1rem 0;
+}
+
+header img {
+  height: 100px;
+}
+
+header ul {
+  display: flex;
+  gap: 1rem;
+}
+
+header ul li {
+  list-style: none;
+  height: var(--header-height);
+  &:hover {
+    cursor: pointer;
+    border-block-end: 0.4rem solid var(--dc-primary);
+  }
+  &:hover a {
+    color: var(--dc-primary);
+  }
+}
+
+header ul a {
+  text-decoration: none;
+  color: black;
+  line-height: var(--header-height);
+  text-transform: uppercase;
+  font-weight: 600;
+  /* letter-spacing: normal; */
 }
