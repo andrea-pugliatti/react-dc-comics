@@ -1,4 +1,5 @@
 import Banner from "./Banner";
+import Comics from "./Comics";
 
 export default function Main() {
   return (
@@ -6,7 +7,7 @@ export default function Main() {
       <div className="jumbotron"></div>
       <div className="content">
         <div className="container">
-          {"-->"} Content goes here {"<--"}
+          <Comics />
         </div>
       </div>
       <Banner />

@@ -91,6 +91,15 @@ header ul a {
   padding: 3rem;
 }
 
+.comics-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 0.3rem 0.9rem;
+  max-width: fit-content;
+  margin-top: -4.5rem;
+  background-color: var(--dc-primary);
+}
+
 /* Banner */
 .banner {
   background-color: var(--dc-primary);
