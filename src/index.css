@@ -76,6 +76,13 @@ header ul a {
 }
 
 /* Content */
+.jumbotron {
+  height: 25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./src/assets/img/jumbotron.jpg");
+}
+
 .content {
   background-color: var(--dc-bg-primary);
   color: white;
