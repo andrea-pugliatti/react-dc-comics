@@ -1,9 +1,11 @@
 export default function Socials() {
-  const facebookImage = "./src/assets/img/footer-facebook.png";
-  const twitterImage = "./src/assets/img/footer-twitter.png";
-  const youtubeImage = "./src/assets/img/footer-youtube.png";
-  const pinterestImage = "./src/assets/img/footer-pinterest.png";
-  const periscopeImage = "./src/assets/img/footer-periscope.png";
+  const imageLinks = [
+    "./src/assets/img/footer-facebook.png",
+    "./src/assets/img/footer-twitter.png",
+    "./src/assets/img/footer-youtube.png",
+    "./src/assets/img/footer-pinterest.png",
+    "./src/assets/img/footer-periscope.png",
+  ];
 
   return (
     <div className="socials">
@@ -13,21 +15,11 @@ export default function Socials() {
         </div>
         <div className="social-links">
           <span>Follow Us</span>
-          <a href="#">
-            <img src={facebookImage} />
-          </a>
-          <a href="#">
-            <img src={twitterImage} />
-          </a>
-          <a href="#">
-            <img src={youtubeImage} />
-          </a>
-          <a href="#">
-            <img src={pinterestImage} />
-          </a>
-          <a href="#">
-            <img src={periscopeImage} />
-          </a>
+          {imageLinks.map((current, index) => (
+            <a key={index} href="#">
+              <img src={current} />
+            </a>
+          ))}
         </div>
       </div>
     </div>

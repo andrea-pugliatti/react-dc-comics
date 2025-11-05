@@ -20,8 +20,8 @@ export default function Header() {
           <img src={logoPath} />
         </a>
         <ul>
-          {navbar.map((current) => (
-            <li>
+          {navbar.map((current, index) => (
+            <li key={index}>
               <a href="#">{current}</a>
             </li>
           ))}
