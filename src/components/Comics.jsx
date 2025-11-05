@@ -4,8 +4,7 @@ const comics = [
     title: "Action Comics #1000: The Deluxe Edition",
     description:
       "The celebration of 1,000 issues of Action Comics continues with a new, Deluxe Edition of the amazing comic that won raves when it hit comics shops in April! This hardcover includes all the stories from that issue, plus the tale by writer Paul Levitz and artist Neal Adams that appeared in the Action Comics: 80 Years Of Superman hardcover, as well as all the variant covers, design sketches by Jim Lee for Superman's new look, scripts for the stories, the original art from the lost story featuring art by Curt Swan and more! Plus: a complete reprint of the stories that started it all—the Superman stories Action Comics #1 and 2 from 1938!",
-    thumb:
-      "https://imgs.search.brave.com/aUNyvZBXUulb963JH7KnQm9AMr8bcBoLsiHREOqayIU/rs:fit:612:612:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvOWZm/ZWYzMDMtMGZhYy00/OGRkLTg3ODctYzUy/NTk0MDk2ODAwXzEu/MTc1ZDk1Mjg2NzY0/OGEwOTczMTY2NGMy/MTE1NjNlYWIuanBl/Zz9vZG5XaWR0aD02/MTImb2RuSGVpZ2h0/PTYxMiZvZG5CZz1m/ZmZmZmY",
+    thumb: "https://m.media-amazon.com/images/I/813JTCG1nwL._SL1500_.jpg",
     price: "$19.99",
     series: "Action Comics",
     sale_date: "2018-10-02",
@@ -74,8 +73,7 @@ const comics = [
     title: "Batman Beyond #1",
     description:
       "“THE RETURN” part one! Terry McGinnis is back as Batman, much to the delight of his family and friends. But is the original Joker really back as well? Inspired by the possible return of their role model, the Jokerz have taken over an entire section of Gotham City and are determined to wreak havoc in the still-rebuilding city. While Batman battles chaos on the streets, his friend Dana is at the mercy of the new leader of the now-unified gang.",
-    thumb:
-      "https://imgs.search.brave.com/jgxYlrx442aozemzjqdmCsd9DkIkRollJp1T8sG8TfE/rs:fit:720:1106:1/g:ce/aHR0cHM6Ly9veXN0/ZXIuaWduaW1ncy5j/b20vd29yZHByZXNz/L3N0Zy5pZ24uY29t/LzIwMTgvMTAvU1RM/MDk3MDk1LTcyMHgx/MTA2LmpwZw",
+    thumb: "https://m.media-amazon.com/images/I/91ee4-l2saL._SL1500_.jpg",
     price: "$2.99",
     series: "Batman Beyond",
     sale_date: "2016-10-26",
@@ -164,8 +162,7 @@ const comics = [
     title: "Catwoman Vol. 1: Copycats",
     description:
       "Following her near-miss wedding with Batman, Catwoman hits the streets to expose a copycat.",
-    thumb:
-      "https://imgs.search.brave.com/bf_FlGnymAgmvweY8YiLAcyy600JdSMl_jHpdR3t5ro/rs:fit:612:612:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvNTA5/M2IxOTEtZTkzZS00/NTJjLThhYTQtYTEw/ZDY0ZTcxN2E5LjA5/N2UwZWM5NDgzYzky/OGExMjY4Nzk1Nzk2/NTliZWNjLmpwZWc_/b2RuV2lkdGg9NjEy/Jm9kbkhlaWdodD02/MTImb2RuQmc9ZmZm/ZmZm",
+    thumb: "https://m.media-amazon.com/images/I/91Yg1Zm8J4L._SL1500_.jpg",
     price: "$16.99",
     series: "Catwoman",
     sale_date: "2019-04-10",
@@ -183,7 +180,9 @@ export default function Comics() {
         {comics.map((current) => {
           return (
             <div className="card" key={current.id}>
-              <img src={current.thumb} />
+              <div className="img-container">
+                <img src={current.thumb} />
+              </div>
               <div>{current.title}</div>
             </div>
           );
