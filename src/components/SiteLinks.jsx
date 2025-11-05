@@ -1,103 +1,72 @@
 export default function SiteLinks() {
+  const links = [
+    {
+      id: 1,
+      title: "DC Comics",
+      links: [
+        { id: 1, title: "Characters", link: "#" },
+        { id: 2, title: "Comics", link: "#" },
+        { id: 3, title: "Movies", link: "#" },
+        { id: 4, title: "TV", link: "#" },
+        { id: 5, title: "Games", link: "#" },
+        { id: 6, title: "Videos", link: "#" },
+        { id: 7, title: "News", link: "#" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Shop",
+      links: [
+        { id: 1, title: "Shop DC", link: "#" },
+        { id: 2, title: "Shop DC Collectibles", link: "#" },
+      ],
+    },
+    {
+      id: 3,
+      title: "DC",
+      links: [
+        { id: 1, title: "Terms Of Use", link: "#" },
+        { id: 2, title: "Privacy Policy", link: "#" },
+        { id: 3, title: "Ad Choices", link: "#" },
+        { id: 4, title: "Advertising", link: "#" },
+        { id: 5, title: "Jobs", link: "#" },
+        { id: 6, title: "Subscriptions", link: "#" },
+        { id: 7, title: "Talent Workshops", link: "#" },
+        { id: 8, title: "CPSC Certificates", link: "#" },
+        { id: 9, title: "Ratings", link: "#" },
+        { id: 10, title: "Shop Help", link: "#" },
+        { id: 11, title: "Contact us", link: "#" },
+      ],
+    },
+    {
+      id: 4,
+      title: "Sites",
+      links: [
+        { id: 1, title: "DC", link: "#" },
+        { id: 2, title: "MAD Magazine", link: "#" },
+        { id: 3, title: "DC Kids", link: "#" },
+        { id: 4, title: "DC Universe", link: "#" },
+        { id: 5, title: "DC Power Visa", link: "#" },
+      ],
+    },
+  ];
+
   return (
     <div className="site-links">
       <div className="logo container">
         <div className="row">
-          <div>
-            <h3>DC Comics</h3>
-            <ul>
-              <li>
-                <a href="#">Characters</a>
-              </li>
-              <li>
-                <a href="#">Comics</a>
-              </li>
-              <li>
-                <a href="#">Movies</a>
-              </li>
-              <li>
-                <a href="#">TV</a>
-              </li>
-              <li>
-                <a href="#">Games</a>
-              </li>
-              <li>
-                <a href="#">Videos</a>
-              </li>
-              <li>
-                <a href="#">News</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>Shop</h3>
-            <ul>
-              <li>
-                <a href="#">Shop DC</a>
-              </li>
-              <li>
-                <a href="#">Shop DC Collectibles</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>DC</h3>
-            <ul>
-              <li>
-                <a href="#">Terms Of Use</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Ad Choices</a>
-              </li>
-              <li>
-                <a href="#">Advertising</a>
-              </li>
-              <li>
-                <a href="#">Jobs</a>
-              </li>
-              <li>
-                <a href="#">Subscriptions</a>
-              </li>
-              <li>
-                <a href="#">Talent Workshops</a>
-              </li>
-              <li>
-                <a href="#">CPSC Certificates</a>
-              </li>
-              <li>
-                <a href="#">Ratings</a>
-              </li>
-              <li>
-                <a href="#">Shop Help</a>
-              </li>
-              <li>
-                <a href="#">Contact us</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>Sites</h3>
-            <ul>
-              <li>
-                <a href="#">DC</a>
-              </li>
-              <li>
-                <a href="#">MAD Magazine</a>
-              </li>
-              <li>
-                <a href="#">DC Kids</a>
-              </li>
-              <li>
-                <a href="#">DC Universe</a>
-              </li>
-              <li>
-                <a href="#">DC Power Visa</a>
-              </li>
-            </ul>
-          </div>
+          {links.map((current) => (
+            <div key={current.id}>
+              <h3>{current.title}</h3>
+              <ul>
+                {current.links.map((item) => (
+                  <li key={item.id}>
+                    <a href={item.link}>{item.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </div>
