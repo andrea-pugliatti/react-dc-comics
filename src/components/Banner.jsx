@@ -1,33 +1,46 @@
 export default function Banner() {
-  const digitalComicsImage = "./src/assets/img/buy-comics-digital-comics.png";
-  const merchandiseImage = "./src/assets/img/buy-comics-merchandise.png";
-  const subscriptionsImage = "./src/assets/img/buy-comics-subscriptions.png";
-  const shopLocatorImage = "./src/assets/img/buy-comics-shop-locator.png";
-  const powerVisaImage = "./src/assets/img/buy-dc-power-visa.svg";
+  const banner = [
+    {
+      id: 1,
+      title: "Digital Comics",
+      link: "#",
+      imageSrc: "./src/assets/img/buy-comics-digital-comics.png",
+    },
+    {
+      id: 2,
+      title: "DC Merchandise",
+      link: "#",
+      imageSrc: "./src/assets/img/buy-comics-merchandise.png",
+    },
+    {
+      id: 3,
+      title: "Subscription",
+      link: "#",
+      imageSrc: "./src/assets/img/buy-comics-subscriptions.png",
+    },
+    {
+      id: 4,
+      title: "Comic Shop Locator",
+      link: "#",
+      imageSrc: "./src/assets/img/buy-comics-shop-locator.png",
+    },
+    {
+      id: 5,
+      title: "DC Power Visa",
+      link: "#",
+      imageSrc: "./src/assets/img/buy-dc-power-visa.svg",
+    },
+  ];
 
   return (
     <div className="banner">
       <div className="container d-flex space-between">
-        <div className="banner-element">
-          <img src={digitalComicsImage} />
-          <a href="#">Digital Comics</a>
-        </div>
-        <div className="banner-element">
-          <img src={merchandiseImage} />
-          <a href="#">DC Merchandise</a>
-        </div>
-        <div className="banner-element">
-          <img src={subscriptionsImage} />
-          <a href="#">Subscription</a>
-        </div>
-        <div className="banner-element">
-          <img src={shopLocatorImage} />
-          <a href="#">Comic Shop Locator</a>
-        </div>
-        <div className="banner-element">
-          <img src={powerVisaImage} />
-          <a href="#">DC Power Visa</a>
-        </div>
+        {banner.map((current) => (
+          <div key={current.id} className="banner-element">
+            <img src={current.imageSrc} />
+            <a href={current.link}>{current.title}</a>
+          </div>
+        ))}
       </div>
     </div>
   );
