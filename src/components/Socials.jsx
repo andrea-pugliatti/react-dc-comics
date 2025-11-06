@@ -3,7 +3,7 @@ export default function Socials({ links, signupLink }) {
 		<div className="socials">
 			<div className="container d-flex space-between">
 				<div className="signup">
-					<a href={signupLink}>Sign-Up Now!</a>
+					<a href={signupLink.link}>{signupLink.title}</a>
 				</div>
 				<div className="social-links">
 					<span>Follow Us</span>

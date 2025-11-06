@@ -284,7 +284,10 @@ function App() {
 		{ id: 5, img: "./src/assets/img/footer-periscope.png", link: "#" },
 	];
 
-	const signupLink = "#";
+	const signupLink = {
+		title: "Sign-Up Now!",
+		link: "#",
+	};
 
 	return (
 		<>
