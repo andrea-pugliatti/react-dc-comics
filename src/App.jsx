@@ -224,6 +224,7 @@ function App() {
 			writers: ["Joëlle Jones"],
 		},
 	];
+
 	const siteLinks = [
 		{
 			id: 1,
